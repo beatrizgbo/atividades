@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário do Vendedor e Consórcio</title>
+</head>
+<body>
+
+    <h1>Cálculos de Salário e Consórcio</h1>
+
+    <script>
+        function calcularSalarioVendedor() {
+            const salarioFixo = 1200.00;
+            const valorVendas = parseFloat(prompt("Digite o valor das vendas do mês:"));
+            const comissao = valorVendas * 0.15;
+            const salarioTotal = salarioFixo + comissao;
+
+            
+            console.log(`Salário Fixo: R$ ${salarioFixo.toFixed(2)}`);
+            console.log(`Valor das Vendas: R$ ${valorVendas.toFixed(2)}`);
+            console.log(`Comissão: R$ ${comissao.toFixed(2)}`);
+            console.log(`Salário Total: R$ ${salarioTotal.toFixed(2)}`);
+        }
+
+        function calcularConsorcio() {
+            const valorConsorcio = parseFloat(prompt("Digite o valor do consórcio: R$"));
+            const entrada = parseFloat(prompt("Digite o valor da entrada: R$"));
+            const juros = parseFloat(prompt("Digite a porcentagem de juros ao mês:"));
+            const parcelas = parseInt(prompt("Digite o número de parcelas:"));
+
+            const valorFinanciado = valorConsorcio - entrada;
+            const taxaJuros = juros / 100;
+            const parcelaMensal = (valorFinanciado * (1 + taxaJuros * parcelas)) / parcelas;
+
+            
+            console.log(`Valor do Consórcio: R$ ${valorConsorcio.toFixed(2)}`);
+            console.log(`Entrada: R$ ${entrada.toFixed(2)}`);
+            console.log(`Valor Financiado: R$ ${valorFinanciado.toFixed(2)}`);
+            console.log(`Número de Parcelas: ${parcelas}`);
+            console.log(`Valor da Parcela: R$ ${parcelaMensal.toFixed(2)}`);
+        }
+
+
+        calcularSalarioVendedor();
+        calcularConsorcio();
+    </script>
+
+</body>
+</html>
