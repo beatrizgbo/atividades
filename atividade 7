@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do Custo do Carro Novo</title>
+</head>
+<body>
+
+    <h1>Cálculo do Custo do Carro Novo</h1>
+
+    <script>
+        function calcularCustoCarro() {
+            
+            const percentualRevendedor = 0.25; // 25%
+            const percentualImpostos = 0.45; // 45%
+
+           
+            let custoFabrica = parseFloat(prompt("Digite o custo de fábrica do carro: R$"));
+
+        
+            let custoFinal = custoFabrica + (custoFabrica * percentualRevendedor) + (custoFabrica * percentualImpostos);
+
+            
+            alert("Custo de Fábrica: R$ " + custoFabrica.toFixed(2));
+            alert("Percentual do Revendedor (25%): R$ " + (custoFabrica * percentualRevendedor).toFixed(2));
+            alert("Impostos (45%): R$ " + (custoFabrica * percentualImpostos).toFixed(2));
+            alert("Custo Final ao Consumidor: R$ " + custoFinal.toFixed(2));
+        }
+
+        
+        calcularCustoCarro();
+    </script>
+
+</body>
+</html>
+
