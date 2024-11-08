@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Ocorrências</title>
+</head>
+<body>
+
+    <h1>Contagem de Ocorrências de um Número</h1>
+
+    <script>
+        function contarOcorrencias() {
+           
+            let vetor = [];
+            let valorBuscado;
+            let contador = 0;
+
+           
+            for (let i = 0; i < 15; i++) {
+                vetor[i] = parseInt(prompt(`Digite o número ${i + 1} de 15:`), 10);
+            }
+
+           
+            valorBuscado = parseInt(prompt("Digite o valor que deseja buscar:"), 10);
+
+            
+            for (let i = 0; i < 15; i++) {
+                if (vetor[i] === valorBuscado) {
+                    contador++;
+                }
+            }
+
+           
+            alert(`O valor ${valorBuscado} ocorre ${contador} vez(es) no vetor.`);
+        }
+
+        
+        contarOcorrencias();
+    </script>
+
+</body>
+</html>
