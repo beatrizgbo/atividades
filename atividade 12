@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Caracteres</title>
+</head>
+<body>
+
+    <h1>Classificação de Caracteres</h1>
+
+    <script>
+        function classificarCaractere() {
+            
+            let caracter = prompt("Digite um caractere:");
+
+            
+            caracter = caracter.toLowerCase();
+
+            
+            if (['a', 'e', 'i', 'o', 'u'].includes(caracter)) {
+                alert("O caractere é uma vogal.");
+            }
+            
+            else if (caracter >= 'a' && caracter <= 'z') {
+                alert("O caractere é uma consoante.");
+            }
+           
+            else if (caracter >= '0' && caracter <= '9') {
+                alert("O caractere é um número.");
+            }
+           
+            else {
+                alert("O caractere é um símbolo.");
+            }
+        }
+
+       
+        classificarCaractere();
+    </script>
+
+</body>
+</html>
