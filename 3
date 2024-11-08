@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimo Bancário</title>
+</head>
+<body>
+
+    <h1>Empréstimo Bancário</h1>
+
+    <script>
+        function verificarEmprestimo() {
+            
+            let salario = parseFloat(prompt("Digite o seu salário:"));
+            let prestacao = parseFloat(prompt("Digite o valor da prestação:"));
+
+            
+            let limite = salario * 0.20;
+
+            
+            if (prestacao > limite) {
+                alert("Empréstimo não pode ser concedido.");
+            } else {
+                alert("Empréstimo pode ser concedido.");
+            }
+        }
+
+        
+        verificarEmprestimo();
+    </script>
+
+</body>
+</html>
