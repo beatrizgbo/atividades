@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algoritmo de Entrada</title>
+  <script>
+    
+    function entrada() {
+      
+      let anoNascimento = prompt("Digite seu ano de nascimento: ");
+      
+      
+      let idadeAtual = prompt("Digite sua idade atual: ");
+      
+      
+      anoNascimento = parseInt(anoNascimento);
+      idadeAtual = parseInt(idadeAtual);
+
+      
+      console.log("Sua idade é: " + idadeAtual);
+
+      
+      if (idadeAtual >= 18) {
+        
+        let nome = prompt("Digite seu nome: ");
+        
+        
+        console.log(nome + ", sua entrada foi permitida.");
+      } else {
+        
+        console.log("Desculpe, sua entrada não é permitida.");
+      }
+    }
+
+    
+    window.onload = entrada;
+  </script>
+</head>
+<body>
+  <h1>Algoritmo de Entrada</h1>
+  <p>Veja as mensagens no console do navegador.</p>
+</body>
+</html>
